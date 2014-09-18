@@ -33,6 +33,8 @@ Plugin 'gmarik/Vundle.vim'
 "
 " install plugins with :PluginInstall
 "
-Plugin 'git://github.com/rosenfeld/conque-term'
-Plugin 'git://github.com/vim-scripts/L9'
-Plugin 'git://github.com/vim-scripts/AutoComplPop.git'
+Bundle 'L9'
+Bundle 'AutoComplPop'
+Bundle 'add20/vim-conque'
+
+call vundle#end()
