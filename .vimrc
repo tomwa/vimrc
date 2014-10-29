@@ -1,10 +1,12 @@
-""""
-" Before adding this .vimrc checkout Vundle:
-" git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-""""
-
 syntax on
 colorscheme evening
+
+" OS X
+" alias vim="stty stop '' -ixoff; vim"
+"
+noremap <silent> <C-S>          :update<CR>
+vnoremap <silent> <C-S>         <C-C>:update<CR>
+inoremap <silent> <C-S>         <C-O>:update<CR>
 
 set number
 set shiftwidth=4
@@ -43,3 +45,6 @@ call vundle#end()
 " highlight text over 80 columns wide
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
+" Before adding this .vimrc checkout Vundle:
+" git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+""""
