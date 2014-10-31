@@ -13,6 +13,9 @@ set shiftwidth=4
 set tabstop=4
 set expandtab
 
+" <TAB> complete settings
+set wildmode=list:longest
+
 :filetype on
 :autocmd FileType c,cpp :set cindent
 
