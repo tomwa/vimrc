@@ -48,6 +48,7 @@ Plugin 'gmarik/Vundle.vim'
 Bundle 'L9'
 Bundle 'AutoComplPop'
 Bundle 'add20/vim-conque'
+Plugin 'elzr/vim-json'
 
 call vundle#end()
 
