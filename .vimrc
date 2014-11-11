@@ -19,6 +19,8 @@ set shiftwidth=4
 set tabstop=4
 set expandtab
 
+set showcmd
+
 " <TAB> complete settings
 set wildmode=list:longest
 
