@@ -19,6 +19,7 @@ set shiftwidth=4
 set tabstop=4
 set expandtab
 
+" show current command in status bar
 set showcmd
 
 " <TAB> complete settings
