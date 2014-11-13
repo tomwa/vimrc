@@ -52,6 +52,7 @@ Bundle 'L9'
 Bundle 'AutoComplPop'
 Bundle 'add20/vim-conque'
 Plugin 'elzr/vim-json'
+Bundle 'https://github.com/JarrodCTaylor/vim-shell-executor'
 
 call vundle#end()
 
