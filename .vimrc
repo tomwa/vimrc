@@ -14,6 +14,18 @@ nmap <silent> <RIGHT><RIGHT> :cnf<CR><C-G>
 nmap <silent> <LEFT> :cprev<CR>
 nmap <silent> <LEFT><LEFT> :cpf<CR><C-G>
 
+" previous buffer
+nnoremap gp :bp<CR>
+
+" next buffer
+nnoremap gn :bn<CR>
+
+" List buffers with
+nnoremap gl :ls<CR>
+
+" List buffers and goto buffer
+nnoremap gb :ls<CR>:b
+
 set number
 set shiftwidth=4
 set tabstop=4
