@@ -1,3 +1,8 @@
+" setup ...
+" git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+" curl https://raw.githubusercontent.com/snowch/vimrc/master/.vimrc > ~/.vimrc
+" vim +PluginInstall +qall
+
 syntax on
 colorscheme evening
 
@@ -71,6 +76,4 @@ call vundle#end()
 " highlight text over 80 columns wide
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
-" Before adding this .vimrc checkout Vundle:
-" git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 """"
