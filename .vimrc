@@ -1,5 +1,6 @@
 " setup ...
 " git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+" cp ~/.vimrc ~/.vimrc.bak
 " curl https://raw.githubusercontent.com/snowch/vimrc/master/.vimrc > ~/.vimrc
 " vim +PluginInstall +qall
 
