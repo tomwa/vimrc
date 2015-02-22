@@ -52,6 +52,8 @@ set wildmode=list:longest
 " set autoindent
 
 filetype plugin indent off
+
+" Use builtin omnifun for autocomplete.  Usage: crtl-x ctrl-o
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 
