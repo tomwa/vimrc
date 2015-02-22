@@ -75,4 +75,9 @@ call vundle#end()
 " highlight text over 80 columns wide
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
-""""
+
+" ctrlp cordova
+set wildignore+=*/platforms/* 
+set wildignore+=*/plugins/* 
+set wildignore+=*/hooks/* 
+
