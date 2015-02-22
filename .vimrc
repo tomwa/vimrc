@@ -5,7 +5,7 @@
 " vim +PluginInstall +qall
 
 syntax on
-colorscheme evening
+colorscheme github
 
 " OS X
 " alias vim="stty stop '' -ixoff; vim"
@@ -61,16 +61,11 @@ cmap w!! w !sudo tee > /dev/null %
 " Plugin Management
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+
 Plugin 'gmarik/Vundle.vim'
-""""
-"
-" install plugins with :PluginInstall
-"
-Bundle 'L9'
-Bundle 'AutoComplPop'
-Bundle 'add20/vim-conque'
+Plugin 'https://github.com/kien/ctrlp.vim'
+Bundle 'Valloric/YouCompleteMe'
 Plugin 'elzr/vim-json'
-Bundle 'https://github.com/JarrodCTaylor/vim-shell-executor'
 
 call vundle#end()
 
