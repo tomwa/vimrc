@@ -2,6 +2,7 @@
 " git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 " cp ~/.vimrc ~/.vimrc.bak
 " curl https://raw.githubusercontent.com/snowch/vimrc/master/.vimrc > ~/.vimrc
+" curl http://www.vim.org/scripts/download_script.php?src_id=12456 > ~/.vim/colors/github.vim
 " vim +PluginInstall +qall
 
 syntax on
