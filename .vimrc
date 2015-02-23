@@ -81,3 +81,9 @@ set wildignore+=*/platforms/*
 set wildignore+=*/plugins/* 
 set wildignore+=*/hooks/* 
 
+" read project/.vim files
+let b:thisdir=expand("%:p:h")
+let b:vim=b:thisdir."/.vim"
+if (filereadable(b:vim))
+    execute "source ".b:vim
+endif
