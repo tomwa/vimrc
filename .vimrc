@@ -5,6 +5,8 @@
 " curl http://www.vim.org/scripts/download_script.php?src_id=12456 > ~/.vim/colors/github.vim
 " vim +PluginInstall +qall
 
+" jshint - Install http://stackoverflow.com/a/5893447/1033422
+
 syntax on
 colorscheme github
 
