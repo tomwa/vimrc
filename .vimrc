@@ -73,6 +73,12 @@ Bundle 'Valloric/YouCompleteMe'
 Plugin 'elzr/vim-json'
 Bundle 'scrooloose/syntastic'
 
+" Javascript indentation
+Plugin 'JavaScript-Indent'
+
+" execute shell commands like curl with :ExecuteSelection
+Bundle 'https://github.com/JarrodCTaylor/vim-shell-executor'
+
 call vundle#end()
 
 " highlight text over 80 columns wide
