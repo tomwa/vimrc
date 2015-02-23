@@ -58,6 +58,7 @@ filetype plugin indent off
 " Use builtin omnifun for autocomplete.  Usage: crtl-x ctrl-o
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 cmap w!! w !sudo tee > /dev/null %
@@ -74,7 +75,8 @@ Plugin 'elzr/vim-json'
 Bundle 'scrooloose/syntastic'
 
 " Javascript indentation
-Plugin 'JavaScript-Indent'
+Plugin 'pangloss/vim-javascript'
+
 
 " execute shell commands like curl with :ExecuteSelection
 Bundle 'https://github.com/JarrodCTaylor/vim-shell-executor'
