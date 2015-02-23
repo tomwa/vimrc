@@ -69,6 +69,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'https://github.com/kien/ctrlp.vim'
 Bundle 'Valloric/YouCompleteMe'
 Plugin 'elzr/vim-json'
+Bundle 'scrooloose/syntastic'
 
 call vundle#end()
 
