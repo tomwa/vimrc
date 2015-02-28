@@ -62,6 +62,12 @@ autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType json setlocal syntax=javascript
 
+" Erlang support
+" --------------
+autocmd FileType erlang setlocal expandtab shiftwidth=2 tabstop=8 softtabstop=2
+autocmd BufNewFile,BufRead rebar.config setlocal ft=erlang
+
+
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 cmap w!! w !sudo tee > /dev/null %
 
