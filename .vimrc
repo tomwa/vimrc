@@ -74,6 +74,7 @@ Plugin 'https://github.com/kien/ctrlp.vim'
 Bundle 'Valloric/YouCompleteMe'
 Plugin 'elzr/vim-json'
 Bundle 'scrooloose/syntastic'
+Bundle 'jimenezrick/vimerl'
 
 " Javascript indentation
 Plugin 'pangloss/vim-javascript'
