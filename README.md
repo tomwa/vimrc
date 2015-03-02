@@ -23,4 +23,6 @@ EOT
 
 ```
 # For jshint see: http://stackoverflow.com/a/5893447/1033422
+
+# Tmux vim keys: http://blog.sanctum.geek.nz/vi-mode-in-tmux/
 ```
