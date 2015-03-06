@@ -20,8 +20,6 @@ bind -n C-k if-shell "$is_vim" "send-keys C-k" "select-pane -U"
 bind -n C-l if-shell "$is_vim" "send-keys C-l" "select-pane -R"
 bind -n C-\ if-shell "$is_vim" "send-keys C-\\" "select-pane -l"
 
-# Also bind CAPS-LOCK to CTRL using X Keyboard mapping
-set -g prefix C-a
 EOT
 ```
 
