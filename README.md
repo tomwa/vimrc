@@ -11,6 +11,7 @@ vim +PluginInstall +qall
 
 ```
 # From https://github.com/christoomey/vim-tmux-navigator
+
 cat <<'EOT' >> ~/.tmux.conf
 is_vim='echo "#{pane_current_command}" | grep -iqE "(^|\/)g?(view|n?vim?)(diff)?$"'
 bind -n C-h if-shell "$is_vim" "send-keys C-h" "select-pane -L"
