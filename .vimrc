@@ -73,6 +73,7 @@ Plugin 'elzr/vim-json'
 Bundle 'scrooloose/syntastic'
 Bundle 'jimenezrick/vimerl'
 Bundle 'christoomey/vim-tmux-navigator'
+Plugin 'scrooloose/nerdtree.git'
 
 " Javascript indentation
 Plugin 'pangloss/vim-javascript'
