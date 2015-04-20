@@ -9,6 +9,9 @@ curl http://www.vim.org/scripts/download_script.php?src_id=12456 > ~/.vim/colors
 vim +PluginInstall +qall
 
 curl https://raw.githubusercontent.com/snowch/vimrc/master/.tmux.conf > ~/.tmux.conf
+
+curl https://raw.githubusercontent.com/snowch/vimrc/master/tmux_save_session.sh > ~/.tmux_save_session.sh
+chmod +x ~/.tmux_save_session.sh
 ```
 
 ```
