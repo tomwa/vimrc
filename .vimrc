@@ -1,5 +1,11 @@
 syntax on
-colorscheme github
+
+" https://github.com/altercation/vim-colors-solarized
+if has('gui_running')
+    set background=light
+else
+    set background=dark
+endif
 
 " OS X
 " alias vim="stty stop '' -ixoff; vim"
