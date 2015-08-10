@@ -1,7 +1,7 @@
 # .vimrc and .tmux.conf
 
 ```
-git clone https://github.com/snowch/vimrc ~/.vim
+git clone git@github.com:snowch/vimrc.git ~/.vim
 
 cp ~/.vimrc ~/.vimrc.bak
 ln -s ~/.vim/.vimrc ~/.vimrc
