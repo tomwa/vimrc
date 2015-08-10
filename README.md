@@ -3,7 +3,7 @@
 ```
 git clone git@github.com:snowch/vimrc.git ~/.vim
 
-cp ~/.vimrc ~/.vimrc.bak
+[[ -f ~/.vimrc ]] && mv ~/.vimrc ~/.vimrc_$(date +%s)
 ln -s ~/.vim/.vimrc ~/.vimrc
 
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
