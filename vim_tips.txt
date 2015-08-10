@@ -15,3 +15,8 @@
 " paste from clipboard
 *p
 
+" save from sudo
+w!!
+
+" toggle overlength
+<leader>m

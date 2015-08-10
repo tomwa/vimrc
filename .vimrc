@@ -1,18 +1,19 @@
 syntax on
 
-" https://github.com/altercation/vim-colors-solarized
-if has('gui_running')
-    set background=light
-else
-    set background=dark
-endif
+let mapleader = "-"
 
-" OS X
-" alias vim="stty stop '' -ixoff; vim"
-"
-noremap <silent> <C-S>          :update<CR>
-vnoremap <silent> <C-S>         <C-C>:update<CR>
-inoremap <silent> <C-S>         <C-O>:update<CR>
+colorscheme github
+
+if has("unix")
+  let s:uname = system("uname -s")
+  if s:uname == "Darwin"
+
+    " alias vim="stty stop '' -ixoff; vim"
+    noremap <silent> <C-S>          :update<CR>
+    vnoremap <silent> <C-S>         <C-C>:update<CR>
+    inoremap <silent> <C-S>         <C-O>:update<CR>
+  endif
+endif
 
 " copy and paste to clipboard
 set clipboard=unnamedplus,unnamed,autoselect 
@@ -70,8 +71,9 @@ autocmd BufNewFile,BufRead rebar.config setlocal ft=erlang
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 cmap w!! w !sudo tee > /dev/null %
 
-""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin Management
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
@@ -83,23 +85,41 @@ Bundle 'scrooloose/syntastic'
 Bundle 'jimenezrick/vimerl'
 Bundle 'christoomey/vim-tmux-navigator'
 Plugin 'scrooloose/nerdtree.git'
-
-" Javascript indentation
-Plugin 'pangloss/vim-javascript'
-
 " NerdTree on by default
 autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd p
+" Close nerdtree if last window
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
+" Javascript indentation
+Plugin 'pangloss/vim-javascript'
 
 " execute shell commands like curl with :ExecuteSelection
 Bundle 'https://github.com/JarrodCTaylor/vim-shell-executor'
 
 call vundle#end()
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " highlight text over 80 columns wide
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%81v.\+/
+
+let s:activatedh = 0 
+function! ToggleH()
+    if s:activatedh == 0
+        let s:activatedh = 1 
+        match OverLength '\%>80v.\+'
+    else
+        let s:activatedh = 0 
+        match none
+    endif
+endfunction
+nnoremap <leader>m :call ToggleH()<CR>
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 
 " ctrlp cordova
 set wildignore+=*/platforms/* 
