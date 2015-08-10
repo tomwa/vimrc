@@ -1,0 +1,17 @@
+
+
+" Execute yanked lines as vim script
+:@"
+
+" Quick ref
+:help quickref
+
+" yank single line to clipboard
+"*y
+
+" yank selection to clipboard
+:'<, '>*y
+
+" paste from clipboard
+*p
+
