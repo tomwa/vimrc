@@ -14,6 +14,9 @@ noremap <silent> <C-S>          :update<CR>
 vnoremap <silent> <C-S>         <C-C>:update<CR>
 inoremap <silent> <C-S>         <C-O>:update<CR>
 
+" copy and paste to clipboard
+set clipboard=unnamedplus,unnamed,autoselect 
+
 " Make it easy to navigate errors (and helpgrep)
 nmap <silent> <RIGHT> :cnext<CR>
 nmap <silent> <RIGHT><RIGHT> :cnf<CR><C-G>
@@ -83,6 +86,10 @@ Plugin 'scrooloose/nerdtree.git'
 
 " Javascript indentation
 Plugin 'pangloss/vim-javascript'
+
+" NerdTree on by default
+autocmd VimEnter * NERDTree
+autocmd VimEnter * wincmd p
 
 
 " execute shell commands like curl with :ExecuteSelection
