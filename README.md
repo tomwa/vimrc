@@ -1,9 +1,13 @@
 # .vimrc and .tmux.conf
 
 ```
-git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+git clone git@github.com:snowch/vimrc.git ~/.vim
+
 cp ~/.vimrc ~/.vimrc.bak
-curl https://raw.githubusercontent.com/snowch/vimrc/master/.vimrc > ~/.vimrc
+ln -s ~/.vim/.vimrc ~/.vimrc
+
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
 mkdir ~/.vim/colors
 curl http://www.vim.org/scripts/download_script.php?src_id=12456 > ~/.vim/colors/github.vim
 curl https://raw.githubusercontent.com/altercation/vim-colors-solarized/master/colors/solarized.vim >  ~/.vim/colors/solarized.vim
