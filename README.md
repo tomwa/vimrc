@@ -12,6 +12,8 @@ mkdir ~/.vim/colors
 curl -s https://raw.githubusercontent.com/endel/vim-github-colorscheme/master/colors/github.vim > ~/.vim/colors/github.vim
 vim +PluginInstall +qall
 
+vim 'https://conque.googlecode.com/files/conque_2.3.vmb' -c ':so % | q'
+
 curl -s https://raw.githubusercontent.com/snowch/vimrc/master/.tmux.conf > ~/.tmux.conf
 
 curl -s https://raw.githubusercontent.com/snowch/vimrc/master/tmux_save_session.sh > ~/.tmux_save_session.sh
