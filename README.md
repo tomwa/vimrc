@@ -14,6 +14,9 @@ vim +PluginInstall +qall
 
 vim 'https://conque.googlecode.com/files/conque_2.3.vmb' -c ':so % | q'
 
+# fix colorsupport
+curl -s http://www.vim.org/scripts/download_script.php?src_id=20938 > ~/.vim/plugin/colorsupport.vim
+
 curl -s https://raw.githubusercontent.com/snowch/vimrc/master/.tmux.conf > ~/.tmux.conf
 
 curl -s https://raw.githubusercontent.com/snowch/vimrc/master/tmux_save_session.sh > ~/.tmux_save_session.sh
