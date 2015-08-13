@@ -44,6 +44,14 @@ set clipboard=unnamedplus,unnamed,autoselect
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" map for conque term - note second <CR> to skip warning
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <leader>chb :ConqueTermSplit bash<CR><CR>
+nnoremap <leader>cht :ConqueTermSplit bash<CR>tmux<CR><CR>
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " shortcuts for editing and saving vimrc
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 :nnoremap <leader>ev :vsplit $MYVIMRC<cr>
