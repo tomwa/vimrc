@@ -4,6 +4,12 @@ let mapleader = "-"
 
 colorscheme github
 
+" for taglist plugin
+filetype plugin on
+
+"Note hardcoded path
+"let Tlist_Ctags_Cmd='/usr/local/bin/ctags'
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Abbreviations
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -148,6 +154,9 @@ Plugin 'pangloss/vim-javascript'
 " execute shell commands like curl with :ExecuteSelection
 Bundle 'https://github.com/JarrodCTaylor/vim-shell-executor'
 
+"Plugin 'taglist.vim'
+Plugin 'taglist-plus'
+
 call vundle#end()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -196,3 +205,24 @@ let g:syntastic_check_on_wq = 0
 
 " ignore tidy errors/warnings for ionic 
 let g:syntastic_html_tidy_ignore_errors=["<ion-", "discarding unexpected </ion-", " proprietary attribute \"ng-"]
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Erlang ctags - https://francoisorsini.wordpress.com/2012/04/14/vim-ctags-for-erlang/
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let Tlist_Use_Right_Window=1
+let Tlist_Enable_Fold_Column=0
+let Tlist_Show_One_File=1 " especially with this one
+let Tlist_Compact_Format=1
+let Tlist_Ctags_Cmd='/usr/local/bin/ctags'
+set updatetime=1000
+nmap ,t :!(cd %:p:h;ctags *)& " Maps the updates of tags to key ,t.
+set tags=tags; " The ';' at the end will cause the ctags plugin to search for current dir and above dirs until it find a tag file.
+
+" Add the following below if you want to generate ctags upon saving a file
+" Auto-generate ctags upon making changes to a file
+autocmd BufWritePost *.erl :silent !(cd %:p:h;ctags *)&
+
+" If you want to auto compile (erlc) upon saving a file, then add that one as well
+" Run erlc on the file being saved
+autocmd BufWritePost *.erl :!erlc <afile>
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

@@ -29,3 +29,11 @@ w!!
                                     " conque bash (horizontal)
 <leader>ch
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+erlang ctags
+
+   ctags --file-scope=no -R --languages=erlang .
+
+   ctrl-] takes you to the declaration of a keyword your cursor is currently over.
+          Jump is made so it doesn't matter in which file it is defined. Keyword is put on the tag stack.
+   ctrl-t takes you a step back in the tag stack.
+   ctrl-w w toggles the keywords list window.
