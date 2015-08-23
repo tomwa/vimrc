@@ -52,8 +52,7 @@ set clipboard=unnamedplus,unnamed,autoselect
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " map for conque term - note second <CR> to skip warning
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <leader>chb :ConqueTermSplit bash<CR><CR>
-nnoremap <leader>cht :ConqueTermSplit bash<CR>tmux<CR><CR>
+nnoremap co :ConqueTermSplit bash<CR><CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
@@ -86,6 +85,15 @@ nnoremap gn :bn<CR>
 nnoremap gl :ls<CR>
 " List buffers and goto buffer
 nnoremap gb :ls<CR>:b
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Tag list
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap to :TlistOpen<CR>
+nnoremap tu :TlistUpdate<CR>
+nnoremap tc :TlistClose<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
@@ -156,6 +164,7 @@ Bundle 'https://github.com/JarrodCTaylor/vim-shell-executor'
 
 "Plugin 'taglist.vim'
 Plugin 'taglist-plus'
+autocmd VimEnter * TlistOpen
 
 call vundle#end()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
