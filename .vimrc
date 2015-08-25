@@ -98,6 +98,16 @@ nnoremap tc :TlistClose<CR>
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Nerdtree 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap no :NERDTree<CR>
+nnoremap nc :NERDTreeClose<CR>
+nnoremap nf :NERDTreeFind<CR>
+nnoremap np :NERDTreeCWD<CR>
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " General Layout
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set number
@@ -165,6 +175,7 @@ Bundle 'https://github.com/JarrodCTaylor/vim-shell-executor'
 "Plugin 'taglist.vim'
 Plugin 'taglist-plus'
 autocmd VimEnter * TlistOpen
+autocmd VimEnter * wincmd p
 
 call vundle#end()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
