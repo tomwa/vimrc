@@ -36,6 +36,10 @@ tc
                                     " tag list update
 tu
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+C-w o                               " toggle single window
+
+tn                                  " toggle numbers
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 erlang ctags
 
    ctags --file-scope=no -R --languages=erlang .

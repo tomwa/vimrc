@@ -48,6 +48,8 @@ set clipboard=unnamedplus,unnamed,autoselect
 :nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+set number
+nnoremap tn :set nonumber!<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " map for conque term - note second <CR> to skip warning
@@ -125,17 +127,15 @@ set wildmode=list:longest
 :filetype on
 :autocmd FileType c,cpp :set cindent
 
-" set cindent
-" set smartindent
-" set autoindent
+"filetype plugin indent off
 
-filetype plugin indent off
+au BufNewFile,BufRead *.gradle setf groovy
 
 " Use builtin omnifun for autocomplete.  Usage: crtl-x ctrl-o
-autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
-autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType json setlocal syntax=javascript
+"autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+"autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+"autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+"autocmd FileType json setlocal syntax=javascript
 
 " Erlang support
 " --------------
@@ -155,6 +155,10 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'https://github.com/kien/ctrlp.vim'
 Bundle 'Valloric/YouCompleteMe'
+filetype plugin indent on
+let g:EclimCompletionMethod = 'omnifunc'
+
+
 Plugin 'elzr/vim-json'
 Bundle 'scrooloose/syntastic'
 Bundle 'jimenezrick/vimerl'
@@ -176,6 +180,8 @@ Bundle 'https://github.com/JarrodCTaylor/vim-shell-executor'
 Plugin 'taglist-plus'
 autocmd VimEnter * TlistOpen
 autocmd VimEnter * wincmd p
+
+Plugin 'ZoomWin'
 
 call vundle#end()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -246,3 +252,5 @@ autocmd BufWritePost *.erl :silent !(cd %:p:h;ctags *)&
 " Run erlc on the file being saved
 autocmd BufWritePost *.erl :!erlc <afile>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
