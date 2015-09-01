@@ -47,3 +47,5 @@ erlang ctags
    ctrl-] takes you to the declaration of a keyword your cursor is currently over.
           Jump is made so it doesn't matter in which file it is defined. Keyword is put on the tag stack.
    ctrl-t takes you a step back in the tag stack.
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+QQ                                  " close all without saving
